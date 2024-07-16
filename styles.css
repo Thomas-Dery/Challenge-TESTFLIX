@@ -117,19 +117,19 @@ main {
     -webkit-background-clip: text;
     color: transparent;
     margin-bottom: 0.7rem; /* Ajusta el valor según el espacio deseado */
-    margin-right: 3rem;
+    margin-right: 5rem;
 }
 
 .hero h2 {
     font-size: 1.5rem;
-    margin-right: 67%;
+    margin-right: 69%;
     margin-bottom: -5rem; 
 }
 
 .button-container {
     display: flex;
     gap: 1rem;
-    margin-left: 2.5rem;
+    margin-left: 1rem;
 }
 
 .button {
@@ -198,7 +198,7 @@ main {
 
     .logo h1 {
         font-size: 5rem; /* Ajustado para la pantalla más pequeña */
-    } 
+    }
 
     .navbar {
         position: absolute;
@@ -217,16 +217,54 @@ main {
     }
 
     #menu-icon {
-        order: 1;
-        margin-right: auto;
+        order: -3;
+        margin-right: 1rem;
     }
 
     #profile-icon {
-        order: 3;
-        margin-left: auto;
+        order: -1;
+        margin-right: 3.5rem;
+    }
+
+    #profile-icon img {
+        width: 40px; /* Ajusta el tamaño del icono de perfil aquí */
+        height: 40px; /* Ajusta el tamaño del icono de perfil aquí */
     }
 
     .logo h1 {
         font-size: 3rem; /* Ajustado para la pantalla más pequeña */
     }
+
+    /* CUERPO PRINCIPAL */
+
+    .hero-content {
+        width: 100%; /* Asegura que el contenido ocupe el 100% del ancho del viewport */
+    }
+
+    .hero h1 {
+        font-size: 4rem; /* Ajusta el tamaño del texto para pantallas más pequeñas */
+        margin-bottom: 0.5rem; /* Ajusta el margen inferior */
+        white-space: normal; /* Permite que el texto se envuelva */
+    }
+
+    .hero h2 {
+        font-size: 1rem; /* Ajusta el tamaño del subtítulo para pantallas más pequeñas */
+        margin-bottom: 0; /* Ajusta el margen inferior */
+    }
+
 }
+
+
+@media screen and (min-width: 1900px) {
+    
+}
+
+
+
+
+/*
+1-revisar porque no puedo modificsr el icono de perfil
+2-hacer responsive para monitores de mas de 1900px (a lo ultimo)
+3-revisar responsive de titulo principal y botones
+4-plantear la estructura html de el carousel
+*/
