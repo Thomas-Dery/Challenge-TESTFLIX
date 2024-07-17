@@ -7,27 +7,9 @@
 
 html, body {
     height: 100%;
+    width: 100%;
     margin: 0;
     padding: 0;
-}
-
-/* Establece el tamaño de fuente base */
-html {
-    font-size: 16px; /* Tamaño de fuente predeterminado */
-}
-
-/* Ajusta el tamaño de fuente base para pantallas más grandes */
-@media (min-width: 768px) {
-    html {
-        font-size: 18px; /* Aumenta el tamaño de fuente para dispositivos más grandes */
-    }
-}
-
-/* Ajusta el tamaño de fuente base para pantallas aún más grandes */
-@media (min-width: 1024px) {
-    html {
-        font-size: 20px; /* Aumenta aún más el tamaño de fuente para pantallas grandes */
-    }
 }
 
 body {
@@ -40,21 +22,30 @@ body {
     background-size: cover; /* Hace que la imagen de fondo cubra todo el espacio disponible */
     background-repeat: no-repeat;
     background-position: center; 
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-row: repeat(3, 1fr 1fr 2fr);
 }
 
 .header {
-    display: flex;
+    display: grid;
     justify-content: space-between;
     align-items: center;
-    padding: 1rem 2rem;
+    padding: 0 5%; 
+    grid-template-columns: 2fr 2fr 1fr;
+    grid-column: 1 / 4;
+    grid-row: 1 / 2;
+    transform: translateY(-10%);
 }
 
 .logo {
-    margin-left: 5%;
+    grid-column: 1 / 3;
+    margin-left: 2%;
 }
 
 .logo h1 {
-    font-size: 3rem;
+    font-size: 3vw;
     background: var(--gradient);
     -webkit-background-clip: text;
     color: transparent;
@@ -69,6 +60,7 @@ body {
     align-items: center;
     gap: 3rem;
     margin-right: 5%;
+    grid-column: 3 / 4;
 }
 
 .add-movie {
@@ -78,48 +70,44 @@ body {
 }
 
 .add-movie img {
-    width: 30px;
-    height: 30px;
+    width: 30%;
+    height: 30%;
 }
 
 .nav-link {
     color: var(--text-color);
     text-decoration: none;
-    font-size: 1.5rem;
+    font-size: 1.3vw;
     font-weight: 500;
+    white-space: nowrap;
 }
 
 #menu-icon img {
-    width: 35px;
-    height: 20px;
+    width: 2vw;
+    height: 1vw;
 }
 
 #notification-icon img {
-    width: 30px;
-    height: 35px;
+    width: 2.3vw;
+    height: 2.3vw;
 }
 
 #profile-icon img {
-    width: 24px;
-    height: 24px;
+    width: 2.5vw;
+    height: 2.5vw;
 }
 
 /* Cuerpo Principal */
 
-main {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(2, 1fr);
-    height: 85%; /* Asegura que main ocupe toda la altura disponible */
-}
 
 .hero {
     text-align: center;
     color: var(--text-color);
-    position: relative; 
+    position: relative;
+    overflow: visible;
+    grid-row: 2 / 4;
     grid-column: 1 / 3;
-    grid-row: 2;
-    margin-bottom: 13%;
+    margin-top: 18%;
 }
 
 .hero-content {
@@ -130,27 +118,27 @@ main {
     width: 80%;
 }
 
-.hero h1 {
-    font-size: 7.5rem;
+.hero-content h1 {
+    font-size: 6.5vw;
     background: var(--gradient);
     -webkit-background-clip: text;
     color: transparent;
-    margin-bottom: 0.7rem; 
-    margin-right: 5rem;
+    padding-right: 20%;
     white-space: nowrap;
 }
 
-.hero h2 {
-    font-size: 1.5rem;
-    margin-right: 69%;
-    margin-bottom: -5rem;
+.hero-content h2 {
+    font-size: 1.4vw;
+    margin-right: 68%;
+    transform: translateY(4.5vw);
     white-space: nowrap;
 }
 
 .button-container {
     display: flex;
-    gap: 1rem;
-    margin-left: 1rem;
+    gap: 2vw;
+    margin-left: .4vw;
+    transform: translateY(-3vw);
 }
 
 .button {
@@ -168,13 +156,13 @@ main {
 }
 
 .button img {
-    margin-right: 10px;
-    width: 20px;
-    height: 20px;
+    margin-right: 10%;
+    width: 1.5vw;
+    height: 1.5vw;
 }
 
 .button-container a {
-    font-size: 1.5rem;
+    font-size: 1.2vw;
 }
 
 .button:hover {
@@ -187,10 +175,12 @@ main {
 
 .button-primary {
     background-color: black;
+    padding: 1vw 3vw;
 }
 
 .button-1 {
-    padding: 0 3.3rem;
+    white-space: nowrap;
+    padding: 0 4vw;
 }
 
 /* CAROUSEL */
@@ -200,7 +190,7 @@ main {
     flex-direction: column;
     align-items: flex-start;
     grid-column: 3 / 4;
-    grid-row: 1 / 4;
+    grid-row: 2 / 4;
     margin-left: 35%;
 }
 
@@ -210,32 +200,34 @@ main {
     color: #fff;
     margin-bottom: 3%;
     transform: translateY(-20%);
-    margin-left: 10%;
+    margin-left: 2vw;
     gap: 1%;
     white-space: nowrap;
 }
 
 .carousel-title {
-    font-size: 100%;
-    font-weight: bold;
+    font-size: 1vw;
+    font-weight: 100 bold;
 }
 
 .dropdown-icon {
-    width: 10%;
+    width: 1vw;
+    height: 1vw;
 }
 
-.carousel-container {
-    width: 50%; 
-    height: 100%; 
+.carousel-container { 
     position: relative;
     border-radius: 1rem;
     margin-left: 7%;
+    margin-right: 7%;
+    gap: 2%;
+    
 }   
 
 
 .carousel-arriba,
 .carousel-abajo {
-    width: 20px; /* Ajuste del tamaño de las flechas */
+    width: 1.5vw; /* Ajuste del tamaño de las flechas */
     height: auto;
     cursor: pointer;
     position: absolute;
@@ -244,11 +236,11 @@ main {
 }
 
 .carousel-arriba {
-    top: -1%; /* Ajuste de posición de la flecha arriba */
+    top: -1.5%; /* Ajuste de posición de la flecha arriba */
 }
 
 .carousel-abajo {
-    bottom: 13%; /* Ajuste de posición de la flecha abajo */
+    bottom: -10%; /* Ajuste de posición de la flecha abajo */
 }
 
 
@@ -279,6 +271,29 @@ main {
 .carousel-item img:hover {
     transform: scale(1.05);
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
