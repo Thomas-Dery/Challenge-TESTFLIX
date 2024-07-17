@@ -58,7 +58,7 @@ body {
 .navbar {
     display: flex;
     align-items: center;
-    gap: 3rem;
+    gap: 2.5rem;
     margin-right: 5%;
     grid-column: 3 / 4;
 }
@@ -70,25 +70,26 @@ body {
 }
 
 .add-movie img {
-    width: 30%;
-    height: 30%;
+    width: 1.5vw;
+    height: 2.5vh;
 }
 
 .nav-link {
     color: var(--text-color);
     text-decoration: none;
-    font-size: 1.3vw;
+    font-size: 1vw;
     font-weight: 500;
     white-space: nowrap;
+    transform: translateY(.5vh);
 }
 
 #menu-icon img {
     width: 2vw;
-    height: 1vw;
+    height: 2vh;
 }
 
 #notification-icon img {
-    width: 2.3vw;
+    width: 2vw;
     height: 2.3vw;
 }
 
@@ -192,27 +193,28 @@ body {
     grid-column: 3 / 4;
     grid-row: 2 / 4;
     margin-left: 35%;
+    margin-bottom: 2vh;
 }
 
 .carousel-header {
     display: flex;
     align-items: center;
     color: #fff;
-    margin-bottom: 3%;
-    transform: translateY(-20%);
-    margin-left: 2vw;
+    margin-bottom: 3vh;
+    margin-left: calc(35% - 4.5vw);
     gap: 1%;
     white-space: nowrap;
 }
 
 .carousel-title {
-    font-size: 1vw;
+    font-size: 1.7vh;
     font-weight: 100 bold;
 }
 
-.dropdown-icon {
+.dropdown-icon img {
     width: 1vw;
-    height: 1vw;
+    height: 1vh;
+    margin-left: .8vw;
 }
 
 .carousel-container { 
@@ -236,11 +238,11 @@ body {
 }
 
 .carousel-arriba {
-    top: -1.5%; /* Ajuste de posición de la flecha arriba */
+    top: -2.5vh; /* Ajuste de posición de la flecha arriba */
 }
 
 .carousel-abajo {
-    bottom: -10%; /* Ajuste de posición de la flecha abajo */
+    bottom: -4vh; /* Ajuste de posición de la flecha abajo */
 }
 
 
@@ -249,13 +251,14 @@ body {
     flex-direction: column; /* Dirección vertical */
     height: 100%;
     width: 100%;
-    margin-top: 1rem;
-    row-gap: 2.5%;
+    margin-top: 1vh;
+    row-gap: 2vh;
+    
 }
 
 .carousel-item {
     width: 100%;
-    height: 150px; /* Altura de cada ítem del carousel */
+    height: 100%; /* Altura de cada ítem del carousel */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -263,7 +266,7 @@ body {
 
 .carousel-item img {
     width: 100%;
-    height: auto;
+    height: 15vh;
     border-radius: 5px;
     transition: transform 0.5s ease;
 }
