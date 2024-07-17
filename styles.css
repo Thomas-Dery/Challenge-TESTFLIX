@@ -280,17 +280,20 @@ body {
     border-radius: 5px;
 }
 
-.play-icon {
-    width: 1vw;
-    height: 1vh;
-    margin-bottom: 1vh;
+.overlay img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 20%; 
+    height: 30%;
 }
 
 .overlay h2 {
     color: white;
     font-size: 2vh;
     text-align: center;
-    margin: 0;
+    margin-top: 13vh;
 }
 
 
