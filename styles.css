@@ -5,7 +5,7 @@
     --gradient: linear-gradient(90deg, rgba(225,108,252,0.76) 0%, rgba(255,140,235,1) 100%);
 }
 
-html, body {
+html, body {  
     height: 100%;
     width: 100%;
     margin: 0;
@@ -14,7 +14,7 @@ html, body {
 
 body {
     margin: 0;
-    padding: 0;
+    padding: 0; 
     font-family: 'Roboto', sans-serif;
     background-color: var(--background-color);
     color: var(--text-color);
@@ -96,7 +96,6 @@ body {
 #profile-icon img {
     width: 2.5vw;
     height: 2.5vw;
-    margin-right: ;
 }
 
 /* Cuerpo Principal */
@@ -307,6 +306,7 @@ body {
         grid-template-columns: repeat(1, 1fr);
         grid-template-rows: repeat(3, 1fr);
         align-items: center;
+        padding: 10px;
     }
 
    .header {
@@ -325,7 +325,7 @@ body {
         align-self: center;
     } 
    .logo h1 {
-        font-size: 6vh;
+        font-size: 34px;
         padding-right: 10%;
     } 
 
@@ -334,32 +334,103 @@ body {
         position: absolute;
         left: 0; 
         top: 0;   
-        margin-top: 35%;
+        margin-top: 5vh;
+        margin-left: 17%;
+        justify-self: end;
+        align-self: center;
     }
     #menu-icon img {
-        width: 200%;
-        height: 100%;
+        width: 27px;
+        height: 12px;
     }
 
     #profile-icon {
         grid-column: 3 / 4;
         position: absolute;
         right: 0;
+        margin-right: 10px;
     }
     #profile-icon img {
         width: 120%;
         height: 170%;
     }
 
-    
     .hero {
+        grid-column: 1 / 2;
+        grid-row: 2 / 3;
         display: flex;
         align-self: center;
+        margin-top: 30%;
+        margin-left: 12%;
     } 
 
+    .hero-content {
+        margin-top: 100px;
+        width: 100%; 
+    }
+    
+    .hero-content h1 {
+        font-size: 52px;
+        white-space: normal; 
+        text-align: center; 
+    }
+    
+    .hero-content h2 {
+        font-size: 15px; 
+        margin-right: 20%;
+        white-space: normal; 
+        text-align: center; 
+    }
+
+   .button-container {
+        align-self: center;
+   } 
+    .button-container a {
+        font-size: 18px;
+   } 
+
+   .button-primary {
+        width: 150px;
+        height: 50px;
+        padding: 0 10vw;
+   } 
+
+   .button-primary img {
+        width: 14px;
+        height: 16px;
+   }
+
+   .button-1 {
+        text-indent: -9999px; /* Mueve el texto fuera del área visible */
+        white-space: nowrap; 
+        overflow: hidden; 
+        padding: 0 3vw;
+        width: 30px;
+    }
+
+   .button-1 img {
+        text-indent: 0; /* Asegura que el icono no se vea afectado */
+        position: relative;
+        display: inline-block;
+        width: 17px;
+        height: 20px;
+        margin-left: 6px;
+    }
+
     .carousel-wrapper {
-        display: none;
+        grid-column: 1 / 2;
+        grid-row: 3 / 4;
+        margin-top: 78%;
+        transform: translateX(-15%);
     } 
+
+   .carousel-header {
+        margin-left: 40px;
+        margin-bottom: 10px;
+    } 
+   .carousel-title {
+        font-size: 15px
+    }
 
     .add-movie, #notification-icon {
         display: none;
