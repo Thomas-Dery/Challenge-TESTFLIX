@@ -417,20 +417,79 @@ body {
         margin-left: 6px;
     }
 
-    .carousel-wrapper {
-        grid-column: 1 / 2;
-        grid-row: 3 / 4;
-        margin-top: 78%;
-        transform: translateX(-15%);
+    .carousel-background {
+        margin-top: 200px;
     } 
+    .carousel-background {
+        
+        background: linear-gradient(180deg, 
+        rgba(41,40,40,0.2) 0%,  /* Comienza casi negro con opacidad 0.7 */
+        rgba(41,40,40,1) 10%,   /* Transición a color sólido al 47% */
+        rgba(38,38,38,1) 100%);        /* Color casi negro en la parte inferior */
 
-   .carousel-header {
-        margin-left: 40px;
-        margin-bottom: 10px;
-    } 
-   .carousel-title {
-        font-size: 15px
+        
+    
+        width: 100%;
+        padding-top: 100px;
+        padding-bottom: 20px;
+        transform: translateX(-10px); 
     }
+
+    .carousel-wrapper {
+        width: 100%;
+        margin: 0;
+        padding: 0;
+    }
+
+    .carousel-header {
+        margin-right: 30%;
+        margin-bottom: 10px;
+        align-self: center;
+    }
+    
+    .carousel-title {
+        font-size: 15px;
+    }
+    
+    .dropdown-icon img {
+        width: 20px;
+        height: auto;
+    }
+
+    .carousel-container {
+        margin-top: 20px;
+        align-self: center;
+    }
+
+    .carousel-arriba, .carousel-abajo {
+        width: 20px;
+        height: auto;
+    }
+    
+    .carousel-arriba {
+        top: -20px;
+    }
+    
+    .carousel-abajo {
+        bottom: -30px;
+    }
+
+    .carousel-inner {
+        margin-right: 0 !important;
+    }
+
+    .carousel-item img {
+        width: 100%; /* Ajusta esto si necesitas un tamaño específico */
+        height: auto;
+    }
+
+    .overlay img{
+        width:48px;
+        height: 48px;
+    }
+    .overlay h2 {
+        padding-top: 40px;
+    } 
 
     .add-movie, #notification-icon {
         display: none;
