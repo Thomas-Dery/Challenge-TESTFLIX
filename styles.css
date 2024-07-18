@@ -299,212 +299,69 @@ body {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-@media screen and (max-width: 970px) {
+@media screen and (max-width: 900px) {
+    
     body {
         background-image: url(imgs/BREAKINGBAD\ 1-1.png);
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-rows: repeat(3, 1fr);
+        align-items: center;
     }
 
-    .header {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        padding: 1rem;
+   .header {
+        grid-column: 1 / 2;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(1, 1fr);
         position: relative;
-    }
+        margin-bottom: 20%;
+   } 
 
     .logo {
-        order: 2;
-        margin: 0 auto;
-        text-align: center;
-    }
-
-    .logo h1 {
-        font-size: 5rem; 
-    }
-
-    .navbar {
-        position: absolute;
-        width: 100%;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        padding: 0 1rem;
-        top: 50%;
-        transform: translateY(-50%);
-        column-gap: 70%;
-    }
-
-    .add-movie, #notification-icon {
-        display: none;
-    }
+        grid-column: 2 / 3;
+        grid-row: 1 / 2;
+        justify-self: center;
+        align-self: center;
+    } 
+   .logo h1 {
+        font-size: 6vh;
+        padding-right: 10%;
+    } 
 
     #menu-icon {
-        order: -3;
-        margin-right: 1rem;
+        grid-column: 1 / 2;
+        position: absolute;
+        left: 0; 
+        top: 0;   
+        margin-top: 35%;
+    }
+    #menu-icon img {
+        width: 200%;
+        height: 100%;
     }
 
     #profile-icon {
-        order: -1;
-        margin-right: 3.5rem;
-        margin-top: .5rem;
+        grid-column: 3 / 4;
+        position: absolute;
+        right: 0;
     }
-
     #profile-icon img {
-        width: 40px; 
-        height: 40px; 
+        width: 120%;
+        height: 170%;
     }
 
-    .logo h1 {
-        font-size: 3rem; 
-    }
-
-    /* CUERPO PRINCIPAL */
-   .hero {
-        grid-row: 2 / 3;
-        grid-column: 1 / 2;
-        margin-top: 100%;
-        margin-left: 100%;
-
-   } 
-
-    .hero-content {
-        width: 100%; 
-        display: flex;
-        flex-direction: column; 
-        align-items: center;
-        margin-left: 8.5rem;
-        margin-bottom: 10%;
-    }
-
-    .hero h1 {
-        font-size: 6rem; 
-        margin-bottom: 2rem; 
-        white-space: normal;
-    }
-
-    .hero h2 {
-        font-size: 2rem; 
-        margin-bottom: 0; 
-        white-space: nowrap; 
-        margin-left: 50%;
-        transform: translateY(40px);
-    }
-
-   .button-container {
-        margin-right: %;
-   } 
-
-   .button-primary {
-        padding: 1.5rem 4rem;
-    }
-      
-    .button-1 {
-        text-indent: -9999px; /* Mueve el texto fuera del área visible */
-        white-space: nowrap; 
-        overflow: hidden; 
-        padding-left: 1rem;
-        padding-right: .7rem;
-    }
     
-    .button-1 img {
-        text-indent: 0; /* Asegura que el icono no se vea afectado */
-        position: relative;
-        display: inline-block;
-        margin-left: .5rem;
-    }
-
-    /* CAROUSEL */
+    .hero {
+        display: flex;
+        align-self: center;
+    } 
 
     .carousel-wrapper {
-        grid-column: 1 / 4;
-        grid-row: 3 / 4;
-        margin-top: 100%;
-        background-color: #000;
+        display: none;
     } 
 
-   .carousel-header {
-        grid-column: 2 / 3;
-        margin-right: 100vw;
-   } 
-
-    .carousel-title {
-        font-size: 1.5rem; 
-    }
-
-    .dropdown-icon img {
-        width: 1rem; 
-        height: 1rem; 
-    }
-
-    .carousel-container {
-        grid-column: 2 / 3;
-    }
-
-    .carousel-arriba, .carousel-abajo {
-        width: 1rem; 
-        height: auto; 
-        top: -1.5rem; 
-        bottom: -2.5rem;
-    }
-
-    .carousel-inner {
-        margin-top: 1rem;
-        row-gap: 1rem;
-    }
-
-    .carousel-item img {
-        height: 10rem; 
-    }
-
-    .overlay img {
-        width: 10%; 
-        height: 15%; 
-    }
-
-    .overlay h2 {
-        font-size: 1rem; 
-        margin-top: 6rem;
+    .add-movie, #notification-icon {
+        display: none;
     } 
-    
 }
-
-
-@media screen and (min-width: 1900px) {
-    
-}
-
-
-
-
-/*
-1-revisar porque no puedo modificsr el icono de perfil
-2-hacer responsive para monitores de mas de 1900px (a lo ultimo)
-3-revisar responsive de titulo principal y botones
-4-plantear la estructura html de el carousel
-*/
