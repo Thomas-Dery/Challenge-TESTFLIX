@@ -8,8 +8,7 @@
     <!-- <style> h1 {background-color: aqua;}</style> -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Text:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
 </head>
 
@@ -32,7 +31,7 @@
             </a>
             <a href="#" id="profile-icon" class="nav-icon">
                 <img src="imgs/Perfil.png" alt="Profile">
-        </a>
+            </a>
         </nav>
     </header>
     <div class="hero">
@@ -84,8 +83,11 @@
                     <div class="carousel-item">
                         <img src="imgs/ELMARGINAL.png" alt="ELMARGINAL">
                         <div class="overlay">
-                            <img src="imgs/Group 33.png" class="play-icon" alt="Play">
-                            <h2>EL MARGINAL</h2>
+                            <!-- Enlace para abrir el modal de EL MARGINAL correctamente envolviendo los elementos -->
+                            <a href="#modalElMarginal">
+                                <img src="imgs/Group 33.png" class="play-icon" alt="Play">
+                                <h2>EL MARGINAL</h2>
+                            </a>
                         </div>
                     </div>
                 </div>
@@ -93,9 +95,24 @@
             </div>
         </div>
     </div>
-    
-    
 
+
+    <!-- Contenedor del modal para EL MARGINAL -->
+    <div id="modalElMarginal" class="modal">
+        <div class="modal-content">
+            <a href="#" class="close">&times;</a>
+            <img src="imgs/ELMARGINAL.png" alt="EL MARGINAL">
+            <div class="modal-description">
+                <img class="icono-modal" src="imgs/Group 33.png">
+                <h2 class="titulo-modal">EL MARGINAL</h2>
+                <p class="texto-modal">Su vida depende del status en las redes sociales y la boda elitista de una amiga...</p>
+                <div class="modal-info">
+                    <span class="rating">★ 7,9</span>
+                    <span class="year">2018</span>
+                </div>
+            </div>
+        </div>
+    </div>
 </body>
 
 </html>
