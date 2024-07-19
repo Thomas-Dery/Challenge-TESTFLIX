@@ -331,6 +331,12 @@ body {
     width: 400px;
     height: 250px;
 }
+
+.modal-description {
+    padding: 15px 20px;
+    box-sizing: border-box;
+}
+
 .modal-header {
     display: flex;
     align-items: center;
@@ -338,11 +344,11 @@ body {
     top: 0;
     left: 0;
     width: 100%;
-    justify-content: center;
-    padding: 10px 0; 
+    justify-content: space-between;
+    padding: 10px 0 20px; 
     margin-top: 220px;
-    transform: translateX(-20%);
     column-gap: 20px;
+    margin-right: 20px;
 }
 
 .modal-content .modal-play {
@@ -350,9 +356,19 @@ body {
     height: 50px;
 }
 
+
 .modal-play img {
     width: 40px;
     height: 40px;
+}
+
+.modal-star {
+    position: relative;
+    margin-right: 10px;
+}
+.modal-star img {
+    width: 35px;
+    height: 35px;;
 }
 
 .modal-header .modal-play {
@@ -362,6 +378,23 @@ body {
 .modal-header h2 {
     order: 2; /* Fuerza al h2 a ser el segundo elemento */
 }
+
+.modal-like img {
+    width: 35px;
+    height: 35px;
+}
+
+.modal-header .modal-star {
+    order: 3;
+    margin-left: auto; /* Esto empujará .modal-star hacia la derecha */
+}
+
+
+.info-container {
+    background-color: linear-gradient(180deg, rgba(41, 40, 40, 0.2) 0%, rgba(41, 40, 40, 1) 8%, rgba(38, 38, 38, 1) 100%);
+        
+}
+
 
 .close {
     align-self: flex-end;
