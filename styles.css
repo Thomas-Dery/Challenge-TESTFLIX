@@ -258,7 +258,6 @@ body {
 .carousel-inner {
     display: flex;
     flex-direction: column;
-    /* Dirección vertical */
     height: 100%;
     width: 100%;
     margin-top: 1vh;
@@ -393,17 +392,14 @@ body {
 .modal-like img {
     width: 35px;
     height: 35px;
-    ;
 }
 
 .modal-header .modal-play {
     order: 1;
-    /* Fuerza a .modal-play a ser el primer elemento */
 }
 
 .modal-header h2 {
     order: 2;
-    /* Fuerza al h2 a ser el segundo elemento */
 }
 
 .modal-like img {
@@ -414,7 +410,6 @@ body {
 .modal-header .modal-like {
     order: 3;
     margin-left: auto;
-    /* Esto empujará .modal-star hacia la derecha */
 }
 
 .modal-degrade {
@@ -446,7 +441,6 @@ body {
     flex-direction: column;
     align-items: center;
     gap: 10px;
-    /* Espaciado entre el ícono y el texto, ajusta según sea necesario */
 }
 
 .modal-description h2 {
@@ -519,7 +513,7 @@ body {
         position: absolute;
         left: 0;
         top: 0;
-        margin-top: 25%;
+        margin-top: 35px;
         margin-left: 17%;
         justify-self: end;
         align-self: center;
@@ -534,7 +528,7 @@ body {
         grid-column: 3 / 4;
         position: absolute;
         right: 0;
-        margin-right: 10px;
+        margin-left: 10%;
     }
 
     #profile-icon img {
@@ -551,15 +545,18 @@ body {
     .hero-content {
         margin-top: 85px;
         width: 100%;
-        margin-left: 10%;
+        margin-left: 25px;
     }
 
     .hero-content h1 {
+        display: flex;
         font-size: 80px;
+        text-align: center;
         white-space: normal;
         text-align: center;
         padding-bottom: 20px;
-        margin-left: 8%;
+        align-items: center;
+        margin-left: 10%;
     }
 
     .hero-content h2 {
@@ -570,7 +567,12 @@ body {
     }
 
     .button-container {
-        
+        margin-left: 0;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        margin-bottom: 10%;
+        transform: translateX(-5vw);
     }
 
     .button-container a {
@@ -624,9 +626,10 @@ body {
     .carousel-wrapper {
         position: relative;
         width: 100%;
-        margin: 0;
+        margin: 100px 0 0 0;
         padding: 0;
         z-index: 1;
+        transform: translateX(-20px);
     }
 
     .carousel-header {
